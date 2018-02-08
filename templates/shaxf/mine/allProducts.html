@@ -1,0 +1,35 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{% static '/shaxf/mine/css/detail.css' %}"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<div id="main">
+			<div id="header">
+				<span id="return">
+					<a href="/detail/">返回</a>
+				</span>
+			</div>
+			<ul>
+                {% for item in productList %}
+                <li style="width:100%;display:flex;">
+                    <a href="#">
+                        <img src="{{item.product.productimg}}" />
+                        <article class="shoppingInfo">
+                            <h6>{{item.product.productlongname}}</h6>
+                            <p class="detailTag"><span>精选</span><span>{{item.product.pedesc}}</span></p>
+                            <span class="unit">{{item.product.specifics}}</span>
+                            <p class="price"><span>￥{{item.productprice}}</span></p>
+                        </article>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{% static '/shaxf/mine/css/detail.css' %}"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<div id="main">
+			<div id="header">
+				<span id="return">
+					<a href="/mine/">返回</a>
+				</span>
+			</div>
+			<div id="menu">
+				<span id="btn1">
+					<a href="#">订单号</a>
+				</span>
+				<span id="btn2">
+					<a href="#">总价</a>
+				</span>
+				<span id="btn3">
+					<a href="#">进度</a>
+				</span>
+			</div>
+			<ul id='product'>
+                {% for order in orderList %}
+                <a href="/allProducts/?id={{order.orderid}}"><li><span>{{order.orderid}}</span><span>{{order.price}}</span><span>{{order.progress}}</span></li></a>
+                {% endfor %}
+			</ul>
+		</div>
+	</body>
+</html>

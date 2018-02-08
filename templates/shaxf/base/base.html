@@ -1,0 +1,62 @@
+{% load static from staticfiles%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'shaxf/base/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shaxf/base/css/swiper.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shaxf/base/css/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shaxf/base/css/base.css' %}" />
+
+    <script type="text/javascript" charset="utf-8" src="{% static 'shaxf/base/js/jquery-3.1.1.min.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'shaxf/base/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'shaxf/base/js/swiper.min.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'shaxf/base/js/base.js' %}"></script>
+
+    {% block linescript%}
+
+    {% endblock linescript%}
+
+</head>
+<body>
+
+    <header></header>
+
+    <div>
+        {% block base %}
+
+        {% endblock base %}
+    </div>
+
+    <footer>
+        <a href="/home/" class="h">
+            <dl>
+                <dt><span id="home"></span></dt>
+                <dd>主页</dd>
+            </dl>
+        </a>
+        <a href="/market/103532/0/0/" class="m">
+            <dl>
+                <dt><span id="market"></span></dt>
+                <dd>闪送超市</dd>
+            </dl>
+        </a>
+        <a href="/cart/" class="c">
+            <dl>
+                <dt><span id="cart"></span></dt>
+                <dd>购物车</dd>
+            </dl>
+        </a>
+        <a href="/mine/" class="i">
+            <dl>
+                <dt><span id="mine"></span></dt>
+                <dd>我的</dd>
+            </dl>
+        </a>
+    </footer>
+</body>
+</html>

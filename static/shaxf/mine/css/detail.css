@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+html, body{
+	font-size: 26.67vw;
+}
+
+#header{
+	line-height: .6rem;
+	height: .6rem;
+	border: 1px solid red;
+	font-size: .2rem;
+}
+#header span{
+	margin-left: .2rem;
+	border: 1px solid teal;
+}
+
+#menu{
+	height: .7rem;
+	border: 1px solid darkcyan;
+	width: 100%;
+	font-size: .2rem;
+	display: flex;
+}
+
+#menu span{
+	margin-top: .2rem;
+	width: 30%;
+	padding-left: .1rem;
+}
+
+#menu span a{
+	text-align: center;
+	display: block;
+	width: 1rem;
+	border: 1px solid deepskyblue;
+}
+
+ul{
+    font-size: .15rem;
+}
+ul li{
+    display: flex;
+}
+
+ul li span{
+    text-align: center;
+    width: 33%;
+}

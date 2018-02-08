@@ -1,0 +1,34 @@
+{% extends 'shaxf/base/base.html' %}
+{% load static from staticfiles%}
+
+{% block linescript%}
+<link rel="stylesheet" type="text/css" href="{% static 'shaxf/mine/css/login.css' %}" />
+<script type="text/javascript" charset="utf-8" src="{% static 'shaxf/mine/js/login.js' %}"></script>
+{% endblock linescript%}
+
+
+{% block base %}
+<div id="loginDiv">
+    <!--点击返回按钮，返回到进入登录界面之前的界面-->
+    <a href="/mine/"><p>&lt;返回</p></a>
+    <div id="box">
+        <form action="/login/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleInputEmail1">账号:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username" name="username">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">密码:</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="passwd">
+              </div>
+            <button type="submit" class="btn btn-default">登陆</button>
+        </form>
+    </div>
+</div>
+{% endblock base %}
+
+
+
+
+
